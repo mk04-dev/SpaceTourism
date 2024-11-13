@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { ICrew } from "../utils";
-
+import "./style.css";
 interface Coords {
 	start: number;
 	scrollLeft: number;
@@ -85,7 +85,7 @@ function Crew(props: Props) {
 					</div>
 					<div
 						ref={ref}
-						className="absolute overflow-hidden inset-0 flex"
+						className="flex absolute overflow-hidden inset-0"
 						onMouseDown={onMouseDown}
 						onMouseMove={onMouseMove}
 						onMouseUp={onMouseUp}
@@ -108,10 +108,10 @@ function Crew(props: Props) {
 										{crew.bio}
 									</span>
 								</div>
-								<div className="crew-image flex justify-center flex-1 h-full">
+								<div className="flex justify-center flex-1 h-full max-tablet:justify-end">
 									<img
 										src={crew.images.webp}
-										className=" max-tablet:max-h-6/6 max-tablet:w-7/12"
+										className="crew-image max-tablet:h-6/6 "
 										draggable={false}
 									></img>
 								</div>
