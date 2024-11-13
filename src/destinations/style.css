@@ -1,0 +1,17 @@
+@media only screen and (min-width: 940px) {
+	.app {
+		background-image: url("/public/destination/background-destination-desktop.jpg");
+	}
+}
+
+@media only screen and (max-width: 940px) {
+    .app {
+		background-image: url("/public/destination/background-destination-tablet.jpg");
+	}
+}
+
+@media only screen and (max-width: 640px) {
+    .app {
+		background-image: url("/public/destination/background-destination-mobile.jpg");
+	}
+}

@@ -3,9 +3,9 @@
 	flex-direction: column;
 	width: 100vw;
 	min-height: 100vh;
-	background-image: url("/src/assets/home/background-home-desktop.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
 }
 
 .app-header {
@@ -14,14 +14,17 @@
 	align-items: center;
 	justify-content: space-between;
 	padding-top: 2rem;
-	position: relative;
+	position: sticky;
+	top: 10px;
 	z-index: 10;
 }
 
 .app-logo {
-	padding: 0 4rem;
 	width: 3rem;
 	height: 3rem;
+	background-image: url('../public/shared/logo.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .header-line {
@@ -37,7 +40,7 @@
 .app-menu {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 	height: 6rem;
 	width: fit-content;
 	min-width: 60%;
@@ -53,19 +56,11 @@
 	align-items: center;
 	gap: 0.4rem;
 	box-sizing: border-box;
-	cursor: pointer;
 	font-family: "Barlow Condensed";
 	letter-spacing: 2px;
 	font-size: 1rem;
 }
-.app-menu-item:not(.active):hover {
-	border-bottom: 4px solid rgba(255, 255, 255, 0.5);
-	margin-bottom: -4px;
-}
-.app-menu-item:is(.active) {
-	border-bottom: 4px solid white;
-	margin-bottom: -4px;
-}
+
 .app-menu-item span:first-child {
 	font-weight: bold;
 }
@@ -77,8 +72,12 @@
 
 @media only screen and (max-width: 940px) {
 	.app {
-		background-image: url("/src/assets/home/background-home-tablet.jpg");
 		overflow: hidden;
+	}
+
+	.app-header {
+		padding: 0;
+		top: 0;
 	}
 	.app-logo {
 		padding: 0 2rem;
@@ -95,11 +94,8 @@
 }
 
 @media only screen and (max-width: 640px) {
-	.app {
-		background-image: url("/src/assets/home/background-home-mobile.jpg");
-	}
 	.app-header {
-		position: fixed;
+		position: sticky;
 		top: 0;
 		padding-top: 20px;
 		padding-right: 20px;

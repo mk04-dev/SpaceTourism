@@ -1,6 +1,11 @@
 import React from "react";
 import "./style.css";
-function Home() {
+
+interface Props {
+	nextMenu: () => void;
+}
+function Home(props: Props) {
+	const { nextMenu } = props;
 	return (
 		<div className="home">
 			<div>
@@ -15,7 +20,7 @@ function Home() {
 				</div>
 			</div>
 			<div>
-				<div className="btn-explore">
+				<div className="btn-explore" onClick={nextMenu}>
 					<span>EXPLORE</span>
 				</div>
 			</div>

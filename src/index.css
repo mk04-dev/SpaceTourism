@@ -1,7 +1,6 @@
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-		"Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: "Bellefair";
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: white;
@@ -12,5 +11,21 @@ code {
 }
 
 .text-secondary {
-	color: #D0D6F9;
+	color: #d0d6f9;
 }
+
+.tab-item {
+	cursor: pointer;
+}
+.tab-item:not(.active):hover {
+	border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+	margin-bottom: -4px;
+}
+.tab-item:is(.active) {
+	border-bottom: 4px solid white;
+	margin-bottom: -4px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
